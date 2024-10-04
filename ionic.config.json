@@ -1,0 +1,7 @@
+{
+  "name": "didactica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
