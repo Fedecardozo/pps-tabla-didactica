@@ -17,8 +17,7 @@ main {
 }
 
 .form {
-  width: 400px;
-  height: 400px;
+  padding: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -62,4 +61,23 @@ main {
 .btn:hover {
   background-color: antiquewhite;
   box-shadow: none;
+}
+p {
+  color: red;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  text-align: start;
+}
+
+.cont-p {
+  height: 22px;
+  margin-bottom: 1rem;
+}
+
+.cont-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1rem;
 }
