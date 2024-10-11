@@ -25,6 +25,6 @@ export class SplashPage {
     setTimeout(() => {
       this.authService.splash = true;
       this.router.navigateByUrl('/login');
-    }, 2200);
+    }, 3000);
   }
 }
