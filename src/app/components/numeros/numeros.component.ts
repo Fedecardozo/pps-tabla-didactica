@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonButton } from '@ionic/angular/standalone';
 
@@ -12,6 +12,7 @@ import { IonButton } from '@ionic/angular/standalone';
 export class NumerosComponent implements OnInit {
   numeros: number[];
   colores: string[];
+  @Input() idioma = 'castellano';
 
   constructor() {
     this.numeros = [];
@@ -22,4 +23,21 @@ export class NumerosComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  decir(item: string) {
+    const audio = new Audio(`assets/audios/numeros/${this.idioma}/${item}.mp3`);
+    switch (this.idioma) {
+      case 'ingles':
+        audio.play();
+
+        break;
+      case 'portuges':
+        audio.play();
+
+        break;
+      default:
+        audio.play();
+        break;
+    }
+  }
 }

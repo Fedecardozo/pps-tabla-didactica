@@ -1,7 +1,14 @@
 <main>
   @for (item of this.numeros; track $index) { @if(item>5) {
-  <button class="{{ this.colores[$index - 5] }}">{{ item }}</button>
+  <button
+    class="{{ this.colores[$index - 5] }}"
+    (click)="decir(item.toString())"
+  >
+    {{ item }}
+  </button>
   } @else {
-  <button class="{{ this.colores[$index] }}">{{ item }}</button>
+  <button class="{{ this.colores[$index] }}" (click)="decir(item.toString())">
+    {{ item }}
+  </button>
   } }
 </main>

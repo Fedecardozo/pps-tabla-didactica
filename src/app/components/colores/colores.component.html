@@ -1,5 +1,5 @@
 <main>
   @for (item of this.colores; track $index) {
-  <button class="{{ item }}"></button>
+  <button class="{{ item }}" (click)="decir(item)"></button>
   }
 </main>

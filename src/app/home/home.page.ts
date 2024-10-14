@@ -44,6 +44,7 @@ import { AnimalesComponent } from '../components/animales/animales.component';
 })
 export class HomePage {
   enum: number = 0;
+  idioma: string = 'castellano';
   constructor() {
     addIcons({ add, colorPalette, document, globe, language, earth, grid });
   }
@@ -55,5 +56,9 @@ export class HomePage {
    */
   mostrarContenido(num: number) {
     this.enum = num;
+  }
+
+  cambiarIdioma(idioma: string) {
+    this.idioma = idioma;
   }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IonButton } from '@ionic/angular/standalone';
 
 @Component({
@@ -12,6 +12,7 @@ import { IonButton } from '@ionic/angular/standalone';
 })
 export class ColoresComponent implements OnInit {
   colores: string[];
+  @Input() idioma = 'castellano';
   constructor() {
     this.colores = [
       'amarillo',
@@ -26,4 +27,21 @@ export class ColoresComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  decir(item: string) {
+    const audio = new Audio(`assets/audios/colores/${this.idioma}/${item}.mp3`);
+    switch (this.idioma) {
+      case 'ingles':
+        audio.play();
+
+        break;
+      case 'portuges':
+        audio.play();
+
+        break;
+      default:
+        audio.play();
+        break;
+    }
+  }
 }

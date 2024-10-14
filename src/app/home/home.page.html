@@ -4,16 +4,16 @@
     <ion-icon name="earth"></ion-icon>
   </ion-fab-button>
   <ion-fab-list side="top">
-    <ion-fab-button color="danger">
+    <ion-fab-button color="danger" (click)="cambiarIdioma('ingles')">
       <img src="assets/us.png" alt="ingles" />
     </ion-fab-button>
   </ion-fab-list>
-  <ion-fab-list side="start">
+  <ion-fab-list side="start" (click)="cambiarIdioma('portuges')">
     <ion-fab-button color="success">
       <img src="assets/redondo.png" alt="portuges" />
     </ion-fab-button>
   </ion-fab-list>
-  <ion-fab-list side="bottom">
+  <ion-fab-list side="bottom" (click)="cambiarIdioma('castellano')">
     <ion-fab-button color="danger">
       <img src="assets/espana.png" alt="español" />
     </ion-fab-button>
@@ -47,9 +47,9 @@
 </ion-fab>
 
 @switch (this.enum) { @case (1) {
-<app-numeros></app-numeros>
+<app-numeros [idioma]="this.idioma"></app-numeros>
 } @case (3) {
-<app-animales></app-animales>
+<app-animales [idioma]="this.idioma"></app-animales>
 } @default {
-<app-colores></app-colores>
+<app-colores [idioma]="this.idioma"></app-colores>
 } }
