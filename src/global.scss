@@ -105,3 +105,9 @@ button {
 .rosa {
   background-color: violet;
 }
+
+@media screen and (max-height: 650px) {
+  main {
+    flex-direction: row;
+  }
+}

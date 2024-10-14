@@ -1,7 +1,12 @@
 div {
   flex-grow: 1; /* Hace que los botones crezcan proporcionalmente */
   display: flex;
+  align-items: center;
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+img {
+  height: 122px;
 }

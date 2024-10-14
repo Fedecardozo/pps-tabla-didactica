@@ -1,47 +1,39 @@
 <!-- BOTONES LENGUAJES -->
-<ion-fab vertical="center" horizontal="end">
+<ion-fab vertical="top" horizontal="end">
   <ion-fab-button>
     <ion-icon name="earth"></ion-icon>
   </ion-fab-button>
-  <ion-fab-list side="top">
-    <ion-fab-button color="danger" (click)="cambiarIdioma('ingles')">
+  <ion-fab-list side="bottom">
+    <ion-fab-button (click)="cambiarIdioma('ingles')">
       <img src="assets/us.png" alt="ingles" />
     </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="start" (click)="cambiarIdioma('portuges')">
-    <ion-fab-button color="success">
+
+    <ion-fab-button (click)="cambiarIdioma('portuges')">
       <img src="assets/redondo.png" alt="portuges" />
     </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="bottom" (click)="cambiarIdioma('castellano')">
-    <ion-fab-button color="danger">
+
+    <ion-fab-button (click)="cambiarIdioma('castellano')">
       <img src="assets/espana.png" alt="español" />
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
 
 <!-- BOTONES TEMAS -->
-<ion-fab vertical="center" horizontal="start">
+<ion-fab vertical="top" horizontal="start">
   <ion-fab-button color="tertiary">
     <ion-icon name="grid"></ion-icon>
   </ion-fab-button>
-  <ion-fab-list side="top">
-    <ion-fab-button color="success" (click)="this.mostrarContenido(3)">
-      <i class="fa-solid fa-cat"></i>
-    </ion-fab-button>
-  </ion-fab-list>
-  <ion-fab-list side="end">
-    <ion-fab-button color="warning" (click)="this.mostrarContenido(1)">
-      <i class="fa-solid fa-1"></i>
-    </ion-fab-button>
-  </ion-fab-list>
   <ion-fab-list side="bottom">
-    <ion-fab-button
-      color="danger"
-      side="bottom"
-      (click)="this.mostrarContenido(2)"
-    >
-      <ion-icon name="color-palette"></ion-icon>
+    <ion-fab-button (click)="this.mostrarContenido(3)">
+      <i class="fa-solid fa-cat fa-xl" style="color: #ffd43b"></i>
+    </ion-fab-button>
+
+    <ion-fab-button (click)="this.mostrarContenido(1)">
+      <i class="fa-solid fa-1 fa-xl" style="color: #008000"></i>
+    </ion-fab-button>
+
+    <ion-fab-button side="bottom" (click)="this.mostrarContenido(2)">
+      <ion-icon name="color-palette" color="danger"></ion-icon>
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
