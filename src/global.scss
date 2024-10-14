@@ -58,3 +58,50 @@ body {
 .mb-1 {
   margin-bottom: 1rem;
 }
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //  margin: 0;
+  // padding: 0;
+}
+button {
+  flex-grow: 1; /* Hace que los botones crezcan proporcionalmente */
+  margin: 0; /* Elimina el margen entre los botones */
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.verde {
+  background-color: green;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.violeta {
+  background-color: blueviolet;
+}
+
+.blanco {
+  background-color: white;
+}
+
+.negro {
+  background-color: black;
+}
+
+.rosa {
+  background-color: violet;
+}

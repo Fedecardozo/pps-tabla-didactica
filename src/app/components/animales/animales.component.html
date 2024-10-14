@@ -1,0 +1,7 @@
+<main>
+  @for (item of this.animales; track $index) {
+  <div class="{{ this.colores[$index] }}">
+    <img src="{{ '/assets/animals/' + item + '.png' }}" alt="{{ item }}" />
+  </div>
+  }
+</main>

@@ -18,15 +18,13 @@ import { UsersService } from './services/users.service';
 })
 export class AppComponent {
   public router: Router = inject(Router);
-  public auth: UsersService = inject(UsersService);
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.router.navigateByUrl('splash');
   }
+
   ionViewDitEnter() {
     SplashScreen.hide();
-  }
-  async cerrarSesion() {
-    await this.auth.cerrarSesion();
-    this.router.navigateByUrl('/login');
   }
 }
