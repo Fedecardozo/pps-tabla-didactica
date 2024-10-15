@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
@@ -22,6 +22,8 @@ import {
 import { NumerosComponent } from '../components/numeros/numeros.component';
 import { ColoresComponent } from '../components/colores/colores.component';
 import { AnimalesComponent } from '../components/animales/animales.component';
+import { UsersService } from '../services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -43,10 +45,18 @@ import { AnimalesComponent } from '../components/animales/animales.component';
   ],
 })
 export class HomePage {
+  user: UsersService = inject(UsersService);
+  router: Router = inject(Router);
   enum: number = 0;
   idioma: string = 'castellano';
+
   constructor() {
     addIcons({ add, colorPalette, document, globe, language, earth, grid });
+  }
+
+  async cerrarSesion() {
+    await this.user.cerrarSesion();
+    this.router.navigateByUrl('/login');
   }
 
   /**
