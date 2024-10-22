@@ -7,45 +7,55 @@
   </ion-fab-button>
 </ion-fab>
 
-<!-- BOTONES LENGUAJES -->
-<ion-fab vertical="top" horizontal="end">
-  <ion-fab-button>
-    <ion-icon name="earth"></ion-icon>
-  </ion-fab-button>
-  <ion-fab-list side="bottom">
-    <ion-fab-button (click)="cambiarIdioma('ingles')">
-      <img src="assets/us.png" alt="ingles" />
-    </ion-fab-button>
-
-    <ion-fab-button (click)="cambiarIdioma('portuges')">
-      <img src="assets/redondo.png" alt="portuges" />
-    </ion-fab-button>
-
-    <ion-fab-button (click)="cambiarIdioma('castellano')">
+<div class="seleccion">
+  <div class="floating-buttons superior-izquierda">
+    <button class="fab-button" (click)="cambiarIdioma('castellano')">
       <img src="assets/espana.png" alt="español" />
-    </ion-fab-button>
-  </ion-fab-list>
-</ion-fab>
+    </button>
+    <button class="fab-button" (click)="cambiarIdioma('portuges')">
+      <img src="assets/redondo.png" alt="portuges" />
+    </button>
+    <button class="fab-button" (click)="cambiarIdioma('ingles')">
+      <img src="assets/us.png" alt="ingles" />
+    </button>
+  </div>
+  <div class="btns">
+    <div class="idioma">
+      @switch (this.idioma) { @case ('castellano') {
+      <img src="assets/espana.png" alt="español" />
 
-<!-- BOTONES TEMAS -->
-<ion-fab vertical="top" horizontal="start">
-  <ion-fab-button color="tertiary">
-    <ion-icon name="grid"></ion-icon>
-  </ion-fab-button>
-  <ion-fab-list side="bottom">
-    <ion-fab-button (click)="this.mostrarContenido(3)">
-      <i class="fa-solid fa-cat fa-xl" style="color: #ffd43b"></i>
-    </ion-fab-button>
+      } @case ('portuges') {
+      <img src="assets/redondo.png" alt="portuges" />
 
-    <ion-fab-button (click)="this.mostrarContenido(1)">
-      <i class="fa-solid fa-1 fa-xl" style="color: #008000"></i>
-    </ion-fab-button>
+      } @default {
+      <img src="assets/us.png" alt="ingles" />
 
-    <ion-fab-button side="bottom" (click)="this.mostrarContenido(2)">
-      <ion-icon name="color-palette" color="danger"></ion-icon>
-    </ion-fab-button>
-  </ion-fab-list>
-</ion-fab>
+      } }
+    </div>
+    <div class="tema">
+      @switch (this.enum) { @case (1) {
+      <i class="fa-solid fa-1 fa-2xl" style="color: #008000"></i>
+
+      } @case (3) {
+      <i class="fa-solid fa-cat fa-2xl" style="color: #ffd43b"></i>
+
+      } @default {
+      <ion-icon name="color-palette" color="danger" size="large"></ion-icon>
+      } }
+    </div>
+  </div>
+  <div class="floating-buttons superior-derecha">
+    <button class="fab-button" (click)="this.mostrarContenido(3)">
+      <i class="fa-solid fa-cat fa-xl" style="color: #ffd43b" size="large"></i>
+    </button>
+    <button class="fab-button" (click)="this.mostrarContenido(1)">
+      <i class="fa-solid fa-1 fa-xl" style="color: #008000" size="large"></i>
+    </button>
+    <button class="fab-button" (click)="this.mostrarContenido(2)">
+      <ion-icon name="color-palette" color="danger" size="large"></ion-icon>
+    </button>
+  </div>
+</div>
 
 @switch (this.enum) { @case (1) {
 <app-numeros [idioma]="this.idioma"></app-numeros>

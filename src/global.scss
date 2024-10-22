@@ -59,14 +59,27 @@ body {
   margin-bottom: 1rem;
 }
 
-main {
-  min-height: 100vh;
+// main {
+//   min-height: 100vh;
+//   display: flex;
+//   width: 100%;
+//   align-items: end;
+//   // flex-direction: column;
+//   // justify-content: end;
+//   //  margin: 0;
+//   // padding: 0;
+// }
+.div-btns {
+  min-height: 85vh;
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
-  //  margin: 0;
-  // padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  // background-color: aqua;
 }
-button {
+.div-btns > button {
   flex-grow: 1; /* Hace que los botones crezcan proporcionalmente */
   margin: 0; /* Elimina el margen entre los botones */
   padding: 0;
@@ -107,7 +120,9 @@ button {
 }
 
 @media screen and (max-height: 650px) {
-  main {
+  .div-btns {
     flex-direction: row;
+    min-height: 70vh;
+    max-height: 70vh;
   }
 }

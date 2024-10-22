@@ -1,7 +1,9 @@
-<main>
+<!-- <main> -->
+<div class="div-btns">
   @for (item of this.animales; track $index) {
   <div class="{{ this.colores[$index] }}" (click)="decirAnimal(item)">
     <img src="{{ '/assets/animals/' + item + '.png' }}" alt="{{ item }}" />
   </div>
   }
-</main>
+</div>
+<!-- </main> -->

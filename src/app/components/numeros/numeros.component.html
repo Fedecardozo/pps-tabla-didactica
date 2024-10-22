@@ -1,4 +1,5 @@
-<main>
+<!-- <main> -->
+<div class="div-btns">
   @for (item of this.numeros; track $index) { @if(item>5) {
   <button
     class="{{ this.colores[$index - 5] }}"
@@ -11,4 +12,5 @@
     {{ item }}
   </button>
   } }
-</main>
+</div>
+<!-- </main> -->
