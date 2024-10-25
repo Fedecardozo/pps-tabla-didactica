@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 10px;
+  // padding: 15px 0;
   min-height: 15vh;
   max-height: 15vh;
 }
@@ -16,11 +16,11 @@
 .tema {
   padding: 5px;
   margin-top: 5px;
-  height: 46px;
-  width: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // height: 46px;
+  // width: 42px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .idioma {
@@ -28,10 +28,20 @@
   margin-bottom: 5px;
 }
 
+img {
+  height: 52px;
+  width: 52px;
+}
+
 @media screen and (max-height: 650px) {
   .seleccion {
-    min-height: 30vh;
-    max-height: 30vh;
+    min-height: 25vh;
+    max-height: 25vh;
+  }
+  .btns {
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
   }
 }
 // .superior-izquierda {
@@ -44,51 +54,51 @@
 //   left: 295px;
 // }
 
-.floating-buttons {
-  position: fixed;
-  width: 100px; /* Anchura suficiente para los botones */
-  height: 100px; /* Altura para formar el triángulo */
-  display: flex;
-  position: relative; /* Para poder usar posicionamientos absolutos dentro del contenedor */
-}
+// .floating-buttons {
+//   position: fixed;
+//   width: 100px; /* Anchura suficiente para los botones */
+//   height: 100px; /* Altura para formar el triángulo */
+//   display: flex;
+//   position: relative; /* Para poder usar posicionamientos absolutos dentro del contenedor */
+// }
 
-.fab-button {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+// .fab-button {
+//   position: absolute;
+//   width: 45px;
+//   height: 45px;
+//   border: none;
+//   border-radius: 50%;
+//   padding: 0;
+//   background-color: transparent;
+//   cursor: pointer;
+//   overflow: hidden;
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     border-radius: 50%;
+//   }
 
-  &:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  }
-}
+//   &:hover {
+//     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+//   }
+// }
 
-/* Posiciones para formar un triángulo */
-.fab-button:nth-child(1) {
-  top: 0; /* Primer botón en la parte superior */
-  left: 50%; /* Centrado horizontalmente */
-  transform: translateX(-50%);
-}
+// /* Posiciones para formar un triángulo */
+// .fab-button:nth-child(1) {
+//   top: 0; /* Primer botón en la parte superior */
+//   left: 50%; /* Centrado horizontalmente */
+//   transform: translateX(-50%);
+// }
 
-.fab-button:nth-child(2) {
-  bottom: 0; /* Segundo botón abajo a la izquierda */
-  left: 0;
-}
+// .fab-button:nth-child(2) {
+//   bottom: 0; /* Segundo botón abajo a la izquierda */
+//   left: 0;
+// }
 
-.fab-button:nth-child(3) {
-  bottom: 0; /* Tercer botón abajo a la derecha */
-  right: 0;
-}
+// .fab-button:nth-child(3) {
+//   bottom: 0; /* Tercer botón abajo a la derecha */
+//   right: 0;
+// }

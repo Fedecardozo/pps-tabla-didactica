@@ -59,16 +59,12 @@ body {
   margin-bottom: 1rem;
 }
 
-// main {
-//   min-height: 100vh;
-//   display: flex;
-//   width: 100%;
-//   align-items: end;
-//   // flex-direction: column;
-//   // justify-content: end;
-//   //  margin: 0;
-//   // padding: 0;
-// }
+main {
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+}
+
 .div-btns {
   min-height: 85vh;
   max-height: 85vh;
@@ -122,7 +118,13 @@ body {
 @media screen and (max-height: 650px) {
   .div-btns {
     flex-direction: row;
-    min-height: 70vh;
-    max-height: 70vh;
+    min-height: 75vh;
+    max-height: 75vh;
+    width: 80%;
+  }
+  main {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
   }
 }

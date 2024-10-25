@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { IonButton } from '@ionic/angular/standalone';
+import { IonButton, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-colores',
   templateUrl: './colores.component.html',
   styleUrls: ['./colores.component.scss'],
-  imports: [IonButton, CommonModule],
+  imports: [IonCol, IonRow, IonGrid, IonButton, CommonModule],
 
   standalone: true,
 })

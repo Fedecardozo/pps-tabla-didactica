@@ -1,16 +1,16 @@
-<!-- <main> -->
-<div class="div-btns">
-  @for (item of this.numeros; track $index) { @if(item>5) {
-  <button
-    class="{{ this.colores[$index - 5] }}"
-    (click)="decir(item.toString())"
-  >
-    {{ item }}
-  </button>
-  } @else {
-  <button class="{{ this.colores[$index] }}" (click)="decir(item.toString())">
-    {{ item }}
-  </button>
-  } }
-</div>
-<!-- </main> -->
+<main>
+  <div class="div-btns">
+    @for (item of this.numeros; track $index) { @if(item>5) {
+    <button
+      class="{{ this.colores[$index - 5] }}"
+      (click)="decir(item.toString())"
+    >
+      {{ item }}
+    </button>
+    } @else {
+    <button class="{{ this.colores[$index] }}" (click)="decir(item.toString())">
+      {{ item }}
+    </button>
+    } }
+  </div>
+</main>

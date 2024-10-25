@@ -1,17 +1,19 @@
-div {
-  flex-grow: 1; /* Hace que los botones crezcan proporcionalmente */
+.div-img {
+  // flex-grow: 1; /* Hace que los botones crezcan proporcionalmente */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 img {
   height: 120px;
 }
 
-@media screen and (max-height: 650px) {
-  div {
-    align-items: center;
-    min-height: 80vh;
-    max-height: 80vh;
-  }
-}
+// @media screen and (max-height: 650px) {
+//   .div-btns {
+//     align-items: center;
+//     min-height: 80vh;
+//     max-height: 80vh;
+//     width: 80%;
+//   }
+// }
