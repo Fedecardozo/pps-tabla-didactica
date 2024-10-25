@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   const router: Router = inject(Router);
 
   if (auhService.correo) {
-    // auhService.cerrarSesion();
+    auhService.cerrarSesion();
     router.navigateByUrl('/home');
   }
 

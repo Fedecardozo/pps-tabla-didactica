@@ -24,6 +24,7 @@ import { ColoresComponent } from '../components/colores/colores.component';
 import { AnimalesComponent } from '../components/animales/animales.component';
 import { UsersService } from '../services/users.service';
 import { Router } from '@angular/router';
+import { Alert } from '../models/alert';
 
 @Component({
   selector: 'app-home',

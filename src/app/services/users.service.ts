@@ -40,7 +40,7 @@ export class UsersService {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }
 
-  cerrarSesion() {
-    return this.auth.signOut();
+  async cerrarSesion() {
+    return await this.auth.signOut();
   }
 }

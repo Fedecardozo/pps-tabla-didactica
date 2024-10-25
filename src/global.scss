@@ -128,3 +128,45 @@ main {
     justify-content: center;
   }
 }
+
+.custom-swal-popup {
+  background-image: linear-gradient(
+    to bottom,
+    #424242,
+    #212121
+  ); // Fondo en gradiente oscuro
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); // Sombra para dar profundidad
+}
+
+.custom-confirm-button {
+  background-image: linear-gradient(
+    to bottom,
+    #4caf50,
+    #388e3c
+  ); // Gradiente verde para el botón de aceptar
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.custom-cancel-button {
+  background-image: linear-gradient(
+    to bottom,
+    #ff5252,
+    #d32f2f
+  ); // Gradiente rojo para cancelar
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
